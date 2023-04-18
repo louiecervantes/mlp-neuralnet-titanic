@@ -83,7 +83,7 @@ def app():
             # Test the classifier on the testing set
             accuracy = clf.score(X_test, y_test)
             st.write('accuracy = ' + str(accuracy))
-            st.write(classification_report(y_test, clf.predict(X_test)))
+            st.text(classification_report(y_test, clf.predict(X_test)))
             
 
    
