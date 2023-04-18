@@ -48,9 +48,8 @@ def app():
         max_iter = st.slider('Max Iterations', 2000, 4000, 3000, 500)
         if st.button('Run the Neural Net'):
             #load the data and the labels
-            X = data.values[:,0:-1]
-            y = data.values[:,-1]
-            y = y.astype(int)
+            X = df.values[:,0:-1]
+            y = df.values[:,-1].astype(int)
             
             # Convert string data to numerical data
             label_encoder = [] 
