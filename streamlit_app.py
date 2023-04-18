@@ -74,7 +74,7 @@ def app():
             X_test = scaler.transform(X_test)
 
             # Create a neural network classifier using MLPClassifier
-            clf = MLPClassifier(hidden_layer_sizes=(hidden_layers), \
+            clf = MLPClassifier(hidden_layer_sizes=(hidden_layers, hidden_layers, hidden_layers), \
                 activation='relu', solver='adam', max_iter=max_iter)
 
             # Train the classifier on the training set
@@ -85,7 +85,7 @@ def app():
             st.write('accuracy = ' + str(accuracy))
             st.text(classification_report(y_test, clf.predict(X_test)))
             
-    st.write('Run the NN Clasifier several time and try various settings \
+    st.write('Run the NN Classifier several time and try various settings \
             for the number of layers and iterations by moving the sliders.')
     st.write('Notice that even if the settings are the same, \
             the results vary due to the random weights assigned in \
