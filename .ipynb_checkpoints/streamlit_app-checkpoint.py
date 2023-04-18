@@ -24,7 +24,7 @@ def app():
     df = df.sample(frac = 1)
     
     #st.dataframe(df, use_container_width=True)
-    st.write(df.style.hide_index(), use_container_width=True)
+    st.write(df.style.hide_index())
 #run the app
 if __name__ == "__main__":
     app()
