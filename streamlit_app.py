@@ -23,8 +23,9 @@ def app():
     #shufle the data
     df = df.sample(frac = 1)
     
-    #st.dataframe(df, use_container_width=True)
-    st.write(df.style.hide_index())
+    df = df.style.hide(axis="index")
+    st.dataframe(df, use_container_width=True)
+   
 #run the app
 if __name__ == "__main__":
     app()
