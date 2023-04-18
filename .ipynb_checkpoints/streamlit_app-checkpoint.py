@@ -86,16 +86,7 @@ def app():
             st.write('accuracy = ' + accuracy)
             st.write(classification_report(y_test, clf.predict(X_test)))
             
-            
-            
-#print the data to verify encoding was successful
-print('Sample of the encoded data')
-print(X[0:5])
 
-    
-    
-    
-    
    
 #run the app
 if __name__ == "__main__":
