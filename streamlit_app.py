@@ -85,6 +85,11 @@ def app():
             st.write('accuracy = ' + str(accuracy))
             st.text(classification_report(y_test, clf.predict(X_test)))
             
+            st.write('Run the Net several time and try various settings \
+            for the number of layers and iterations by moving the sliders.')
+            st.write('Notice that even if the settings are the same, \
+            the results vary due to the random weights assigned in \
+            the hidden layers.')          
 
    
 #run the app
