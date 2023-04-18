@@ -20,11 +20,12 @@ def app():
     #load the dataset
     df = pd.read_csv('titanic.csv', header=0)
     
+    df = df.style.hide(axis="index")
+    st.dataframe(df, use_container_width=True)
+    
     #shufle the data
     df = df.sample(frac = 1)
     
-    df = df.style.hide(axis="index")
-    st.dataframe(df, use_container_width=True)
    
 #run the app
 if __name__ == "__main__":
